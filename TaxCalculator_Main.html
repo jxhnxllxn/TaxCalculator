@@ -1,0 +1,566 @@
+<!--
+
+PRINCIPLES OF ECONOMICS WITH AGRARIAN REFORM &.... (ECON101);
+FINALS: ONLINE TAX CALCULATOR
+
+by: John Allen de Chavez
+    BS INFO TECHNOLOGY (2nd Yr - 1st Sem);
+    
+to be submitted to: Miss Margie Ramirez
+
+current status: 10% in progress;
+update: 10:13pm / 07-08-2017;
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en-US,en-UL,en-PH">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta discription=" " content=" ">
+
+    <title> Tax Calculator v1.0 </title>
+
+   <!--main style-->
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+
+   <!--font-->
+    <link type="text/css" rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <nav>
+        <div id="nav_container"  class="max1920p">
+            <a href="#">
+                <li id="mainHome" class="mainHome"> <i class="fa fa-calculator" aria-hidden="true"></i> TAX CALCULATOR</li>
+            </a>
+            <ul>
+                <a href="About.html" target="_blank">
+                    <li><i class="fa fa-info-circle" aria-hidden="true"></i> About </li>
+                </a>
+                <a href="#taxTable-container">
+                    <li><i class="fa fa-table" aria-hidden="true"></i> Tax Table </li>
+                </a>
+                <a href="#">
+                    <li> <i class="fa fa-home" aria-hidden="true"></i> Home </li>
+                </a>
+            </ul>
+        </div>
+        <!--navigator container -->
+    </nav>
+      <div id="hidden-menu-container">
+          
+          
+      </div>
+      <!--hidden calc icon:end-->
+      
+       <!--hidden menu icon-->
+        <div id="hidden-menu">
+           <div id="hidden-nav-menu">
+           <ul style="list-style-type: none;">
+               <!--about-->
+                <a href="About.html" target="_blank"><li><i class="fa fa-info-circle" aria-hidden="true"></i></li></a>
+                <!--taxtable-->
+                <a href="#taxTable-container"><li><i class="fa fa-table" aria-hidden="true"></i></li></a>
+                <!--home-->
+                <a href="#"><li><i class="fa fa-home" aria-hidden="true"></i></li></a>
+                <!--tax calculator-->
+                <a href="#"><li ><i class="fa fa-calculator" aria-hidden="true"></i></li></a>
+           </ul>        
+          </div>
+            <img src="img/burgerNav.png" alt="menu">
+        </div>
+
+           <!--hidden menu icon: end-->
+    <div id="main_container">
+
+        <!-- BANNER -->
+        <div id="banner">
+
+            <div class="max1920p">
+
+                <!--background images -->
+                <div id="bg_banner">
+                    <span> </span>
+
+                </div>
+
+                <div>
+                    <img src="img/birLogo.png" alt="BIR LOGO">
+                </div>
+
+                <div>
+                    <h2> REPUBLIC OF THE PHILIPPINES </h2>
+                    <h1> TAX CALCULATOR </h1>
+                    <h3> By: The Great Allen of AMA </h3>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id="body_container" class="max1920p">
+
+            <h1> CALCULATE YOUR TAX HERE </h1>
+            <hr>
+            <div id="form_container">
+
+                <!--FORM BASIC-->
+                <form class="form" id="form-basic" name="formBasic">
+
+                    <fieldset>
+                        <legend> Basic Pay </legend>
+
+                        <!-- Salary -->
+                        <div id="salary-container" class="fieldset-container">
+                            <label for="salary" id="label-salary" class="label"> Salary </label>
+                            <input name="salary" type="text" placeholder=" " id="input-salary" class="input">
+                            <!--              <span id="sample"> </span>-->
+
+                        </div>
+                        <!-- period -->
+                        <div id="period-container" class="fieldset-container">
+                            <label for="period" id="label-period" class="label"> Period </label>
+                            <select id="select-period"> 
+                        <option> </option>
+                        <option value="semi-monthly"> Semi-Monthly </option>
+                        <option value="monthly"> Monthly </option>
+                        
+                    </select>
+                        </div>
+
+
+                        <!-- Status -->
+                        <div id="status-container" class="fieldset-container">
+                            <label for="status" id="label-status" class="label"> Status </label>
+                            <select id="select-status"> 
+                        <option> </option>
+                        <option value="single"> Single </option>
+                        <option value="married"> Married </option>
+                        <option value="single-1D"> Single w/ 1 Dependent </option>
+                        <option value="single-2D"> Single w/ 2 Dependent </option>
+                        <option value="single-3D"> Single w/ 3 Dependent </option>
+                        <option value="single-4D"> Single w/ 4 Dependent </option>
+                        <option value="married-1D"> Married w/ 1 Dependent </option>
+                        <option value="married-2D"> Married w/ 2 Dependent </option>
+                        <option value="married-3D"> Married w/ 3 Dependent </option>
+                        <option value="married-4D"> Married w/ 4 Dependent </option>
+
+                    </select>
+                        </div>
+                        <!-- deduction -->
+                        <legend> Deductions </legend>
+
+                        <!-- sss -->
+                        <div id="sss-container" class="fieldset-container">
+                            <label for="sss" id="label-sss" class="label"> SSS </label>
+                            <input name="sss" type="text" placeholder=" " id="input-sss" class="input">
+                        </div>
+
+                        <!--phil health-->
+                        <div id="phealth-container" class="fieldset-container">
+                            <label for="phealth" id="label-phealth" class="label"> Philhealth </label>
+                            <input name="phealth" type="text" placeholder=" " id="input-phealth" class="input">
+                        </div>
+
+                        <!-- pagibig -->
+                        <div id="pagibig-container" class="fieldset-container">
+                            <label for="pagibig" id="label-pagibig" class="label"> PAGIBIG </label>
+                            <input name="pagibig" type="text" placeholder=" " id="input-pagibig" class="input">
+                        </div>
+
+                    </fieldset>
+                </form>
+
+                <!--FORM MISC-->
+                <form class="form" id="form-misc" name="formMisc">
+
+                    <fieldset>
+                        <legend> Other Deduction/Miscellaneous </legend>
+                        <div id="health-container" class="fieldset-container">
+                            <label for="healthcare" id="label-health" class="label"> <!--formerly *Health Care*-->
+                            Other Deductions </label>
+                            <input name="health" type="text" placeholder=" " id="input-health" class="input">
+                        </div>
+                        <div id="overtime-container" class="fieldset-container">
+                            <label for="overtime" id="label-overtime" class="label"> Over Time </label>
+                            <input name="overtime" type="text" placeholder=" " id="input-overtime" class="input">
+                        </div>
+                        <div id="holiday-container" class="fieldset-container">
+                            <label for="holiday" id="label-holiday" class="label"> Holiday Pay </label>
+                            <input name="holiday" type="text" placeholder=" " id="input-holiday" class="input">
+                        </div>
+                        <div class="button-container">
+                            <button id="button" type="button"> CALCULATE </button>
+                        </div>
+
+                    </fieldset>
+                </form>
+
+
+                <!-- ReSult -->
+                <form class="form" id="form-result" name="formResult">
+
+                    <fieldset>
+                        <legend> Result </legend>
+                        <div class="result-container">
+                            <p> Total Deductions: </p>
+                            <div class="total" id="tDeduction">
+                                P 0.00
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!--                    <div class="result-container">
+                        <p> Total Allowances: </p>
+                        <div class="total">
+                               P 0.00
+                           </div>
+                    </div>
+                    <hr>-->
+
+                        <div class="result-container">
+                            <p> Total Misc: </p>
+                            <div class="total" id="tMisc">
+                                P 0.00
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="result-container">
+                            <p> Taxable Income: </p>
+                            <div class="total" id="tIncome">
+                                P 0.00
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="result-container">
+                            <p> Withholding Tax: </p>
+                            <div class="total" id="wTax">
+                                P 0.00
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="result-container">
+                            <p> Net Income: </p>
+                            <div class="total" id="netIncome">
+                                P 0.00
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+            <!--form container -->
+
+            <hr id="hr_between-form-main">
+            <!-- MAIN BODY -->
+            <div id="section-container1" class="max1920p">
+                <!-- tax def-->
+                <div id="section1-txt">
+
+                    <h4> What Is Income Tax ?</h4>
+                    <div id="txt-content1">
+                        <p>
+                            <span> <i class="fa fa-quote-left" aria-hidden="true"></i></span> <i> An income tax is a tax that governments impose on financial income generated by all entities within their jurisdiction </i><span> <i class="fa fa-quote-right" aria-hidden="true"></i></span>
+                        </p>
+                    </div>
+                    <hr>
+                    <h4> Why Is It Important And Where Do Our Taxes Go? </h4>
+                    <div id="txt-content1">
+                        <p> <span><i class="fa fa-quote-left" aria-hidden="true"></i></span> <i>The money you pay in taxes goes to many places. In addition to paying the salaries of government workers, your tax dollars also help to support common resources, such as police and firefighters. 
+                        <br><br>
+                        Tax money helps to ensure the roads you travel on are safe and well-maintained. Taxes fund public libraries and parks. Taxes are also used to fund many types of government programs that help the poor and less fortunate, as well as many schools! </i> <span><i class="fa fa-quote-right" aria-hidden="true"></i></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div id="section1-img">
+                    <img id="section1-img1" src="img/taxation-icon.svg" alt="tax icon">
+                    <img  id="section1-img1" src="img/taxpayer.png" alt="tax icon" >
+                </div>
+            </div>
+            <!--section-container -->
+
+            <!-- 2nd section container -->
+
+            <div id="section-container2" class="max1920p" style="background-color: #ffffff;">
+                <!-- tax def-->
+                <div id="section2-img">
+                    <img src="img/taxIcon10.png" alt="tax image">
+                    <img src="img/taxIcon13.png" alt="tax image">
+
+                </div>
+                <div id="section2-txt">
+
+                    <h4> Who Are Required To File Income Tax? </h4>
+                    <div id="txt-content2">
+                        <ol>
+                            <strong>Individuals who are:</strong>
+                            <br>
+                            <i>
+                           <li> Resident citizens receiving income from sources within or outside the Philippines  </li>
+                           <li> Non-resident citizens receiving income from sources within the Philippines </li>
+                           <li> Aliens, whether resident or not, receiving income from sources within the Philippines </li>
+                           <li> Corporation shall include partnerships, no matter how created or organized. </li>
+                           <li> Domestic corporations receiving income from sources within and outside the Philippines </li>
+                           <li> Foreign corporations receiving income from sources within the Philippines </li>
+                           <li> Estates and trusts engaged in trade or business </li>
+                           </i>
+                        </ol>
+                    </div>
+                    <hr>
+                    <h4> What Is Income Tax Refund? How do You Compute It? </h4>
+                    <div id="txt-content2">
+                        <p> <span><i class="fa fa-quote-left" aria-hidden="true"></i> </span> <i>Income tax refund refers to the return of excess taxes withheld from the employees. This situation may occur when the total amount of withheld taxes for the year is more than the employee’s annual income tax for the year. Therefore, the employer will refund the excess withheld amount back to the employee.</i><span> <i class="fa fa-quote-right" aria-hidden="true"></i> </span>
+                        </p>
+                        <br>
+                        <a href="https://www.lilkuya.com/compute-income-tax-refund/" target="_blank"> ...click here to learn how to compute income tax return... </a>
+                    </div>
+                </div>
+            </div>
+            <!--section-container: 2nd-->
+<div id="tax-computation-container" class="max1920p">
+    <h4> How To Compute Income Tax Manually </h4>
+    <div id="slide-container">
+        <div id="left-side-clicker" onclick="slideIndex(-1)">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </div>
+        <div id="right-side-clicker" onclick="slideIndex(1)">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </div>
+        
+        <div id="slider-container">
+        <div id="slider" class="page1 slider">
+            <div>
+                <img src="img/slides/taxIcon3.png" alt="tax icon">
+            </div>
+            <div>
+                <p>
+                    Knowing how to compute your income tax can definitely make you understand why you’re being deducted of that amount. By knowing this, you’ll not be surprise next time you check and open your payslip. And yes, the hard truth is as your salary goes up so your taxes. Let see some basic examples on how to compute income tax in the Philippines.
+                </p>
+            </div>
+
+        </div>
+        <div id="slider" class="page2 slider">
+            <div>
+                <img src="img/slides/taxtableIcon1.png" alt="tax icon">
+            </div>
+
+            <div>
+                <p> UNDERSTANDING BIR TAX TABLE </p>
+                <p>
+                    The amount being deducted in your salary didn’t come from the thin air. Nor it was not guessed by the HR or accountant in your company. Basically they are following rules and guidelines provided by BIR(Bureau of Internal Revenue) in computing your taxes. To compute income tax in the Philippines, BIR tax table is being used. what is BIR tax table?
+                    <br><br> BIR tax table is just a reference of pre-computed tax amount for each civil status and income frequency provided by BIR. See the latest BIR tax table below for your reference.
+                </p>
+            </div>
+        </div>
+        <div id="slider" class="page3 slider">
+            <div>
+                <img src="img/slides/taxtable-slider3.png" alt="tax icon">
+            </div>
+            <div>
+                <p>
+                    As you can see, each income frequency(semi-monthly and monthly) are present on the table. After determining your salary or income frequency, you also need to check your civil status. Each civil status has its own computation on the table.
+                </p>
+            </div>
+        </div>
+        <div id="slider" class="page4 slider">
+                 <div>
+                  <p>
+                    When you got your taxable income computed, In the row indicating your civil tax status, look for the highest amount that does not exceed your taxable income. You can see the fix amount of tax there PLUS the corresponding percentage you need to add. That will be your tax deductions. Taxable income is being computed as:
+                <br><br>
+                    <span><i class="fa fa-quote-left" aria-hidden="true"></i></span> <i style="    color: #690000;">Taxable income = Monthly Basic Pay + Overtime Pay + Holiday Pay + Night Differential – Tardiness- Absences – SSS/Philhealth/PagIbig deductions</i> <span><i class="fa fa-quote-right" aria-hidden="true"></i></span>
+                 <br><br>
+                    Later, we’ll check how this table is being used in computing your income tax. You can see all  the status in the “legend” on the bottom of the page. See below.
+                </p>        
+            </div>
+            <div>
+                <img src="img/slides/taxtable-slider4.png" alt="tax icon">
+            </div>
+            
+        </div>
+        <div id="slider" class="page5 slider"> 
+            <div>
+                <img src="img/slides/taxIconCalculator1.png" alt="tax icon">
+            </div>
+            <div>
+                <p>
+                Now we have the basic understanding of the BIR Tax table, let’s have some basic example on how to compute income tax in the Philippines. Before we’re able to get the tax amount, we need to figure out how much would be the taxable income of a given individual. Again, the formula to compute the taxable income is the following:
+                <br><br>
+                <strong>Taxable income = Monthly Basic Pay + Overtime Pay + Holiday Pay + Night Differential – Tardiness- Absences – SSS/Philhealth/PagIbig deductions</strong>
+                <br><br>
+                To better understand this, let’s have some example:
+                <br><br>
+                Let say Juan is a father with one child and working as an I.T. His basic monthly salary is P25,000. How do we compute Juan’s income tax? Let see.
+                </p>
+                
+            </div>       
+        </div>
+        <div id="slider" class="page6 slider">
+            <div>
+                <p>
+                    SSS contribution – P581 Here’s the link to new SSS contribution table.
+                    Philhealth contribution – P312 Here’s the link to Philhealth contribution
+                    Pag-ibig contribution – P100
+                    <br><br>
+                    To simplify the computation, let’s say Juan didn’t have other additional pay such as holiday pay, night differential and other deductions like tardiness and absences. Just the basic salary and the required contributions to the government. Juan’s taxable income will be P24,006.20. How? Here’s how it is computed:
+                    <br><br>
+                    Taxable income = P25,000 – (P581.30 + P312.50 + P100)
+                    = P25,000 – 993.8
+                    = P24,006.20
+                    <br><br>
+                    Since Juan is a father with a qualified depended, his civil tax status will be under “ME1/S1“. That’s for married employee with qualified dependent/children. The highest amount that does not exceed Juan’s taxable income of P24,006.20 is P17,917 (ME1/S1 row, Column 6).
+                </p>
+                
+            </div>    
+            <div>
+                <img src="img/slides/taxtable-slider6.png" alt="tax icon">
+            </div>
+            
+        </div>
+        <div id="slider" class="page7 slider"> 
+               <div>
+                <p>
+                    After getting the taxable income, as what the tax table indicates Juan’s tax will be 1,875.00 + 25% over. This can be found at the heading of each column. For Juan, it’s column 6.
+                    <br><br>
+                    This means Juan’s tax is P1,875 plus 25% of the difference of his taxable income (P24,006.20) and the amount in the table (P17,917).
+                    <br><br>
+                    Here’s the computation:
+                    <br><br>
+                    Tax = 1,875 + [(24,006.20-17,917) X .25]
+                    = 1,875 + (6,089.2 x .25)
+                    = 1,875 + 1,522.3
+                    = P3,397.30
+                    <br><br>
+                    Every month, Juan’s salary will be deducted an amount of P3,397.30 as his withholding tax.  
+                    <br><br>
+                    And That's it. We now have figured out how to compute income tax in the Philippines.  I hope this has been informative. Until next time, cheers!
+                </p>
+                </div>
+               <div>
+                <img src="img/slides/taxIcon.png" alt="tax icon">
+            </div>
+        </div>
+<!--        <div id="slider" class="page8"> slide 8 </div>
+        </div>-->
+        
+    </div>
+
+</div>
+            </div>
+            <div id="taxTable-container" class="max1920p">
+                <img src="img/BIR-Tax-table.png" alt="BIR TAX TABLE">
+            </div>
+
+            <div id="contributors" class="max1920p">
+                <!--sample only: for display purpose only-->
+                <h3> RESOURCES </h3>
+                <div>
+                    <h2> PhilHealth Contibution: </h2>
+                    <p>
+                        <a href="https://www.philhealth.gov.ph/partners/employers/contri_tbl.html" target="_blank">philhealth contribution table 1 </a> <br>
+                        <a href="https://philpad.com/new-philhealth-contribution-table/" target="_blank"> philhealth contribution table 2 </a>
+                        <br>
+                        <a href="http://sprout.ph/blog/how-to-calculate-your-philhealth-contribution/" target="_blank"> philhealth computation/contribution procedures </a>
+                        
+
+                    <h2> SSS Deduction Computation: </h2>
+                        <a href="http://support.payrollhero.com/knowledge-base/how-payrollhero-computes-the-sss-deduction/" target="_blank"> sss deduction computation </a>
+                        <br>
+                        <a href="https://www.sss.gov.ph/" target="_blank"> sss.gov.ph </a><br>
+
+                </div>
+                <div>
+                    <h2> PagIbig Computation: </h2>
+                        <a href="https://philpad.com/pagibig-contribution-table/" target="_blank"> pagibig cotribution table </a>
+                        <br>
+
+                    <h2> Philippine Tax Referrences: </h2>
+                        <a href="http://birtaxcalculator.com/calculator.php" target="_blank"> birtaxcalculator.com/calculator.php</a>
+                        <br>
+                        <a href="http://www.rappler.com/business/53216-income-tax-calculator" target="_blank"> rappler.com/..../income-tax-calculator </a>
+                        <br>
+                        <a href="https://www.bir.gov.ph/index.php/tax-information/income-tax.html" target="_blank"> bir.gov.ph/...incom-tax.html</a>
+                        
+                    
+                </div>
+
+                <!--sample only: for display purpose only-->
+            </div>
+
+            <!-- MAIN BODY: end -->
+        </div>
+
+        <!--body_container-->
+
+        <footer>
+            <div id="footer-container" class="max1920">
+                <div>
+                    <p> References : </p>
+                    <hr class="footer_hr">
+                    <p>
+                        BIR TAX CALCULATOR <br> SSS <br> PhilHealth <br> PAGIBIG Funds <br> Rappler Tax Calculator
+                    </p>
+
+                </div>
+                <div>
+                    <p> Downloads : </p>
+                    <hr class="footer_hr">
+                    <p>
+                        BIR tax table<br> SSS contribution table<br> GSIS contribution table<br> PAGIBIG contribution table<br> PhilHealth contribution table
+                    </p>
+
+                </div>
+                <div>
+                    <p> Contact Us / Socia Media : </p>
+                    <hr class="footer_hr">
+                    <p>
+                        <a href="https://www.facebook.com/J0hn19All3n"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="https://www.instagram.com/th3_gr3at_all3n/"><i class="fa fa-instagram" aria-hidden="true"></i></a> <i class="fa fa-twitter" aria-hidden="true"></i>  <i class="fa fa-github-square" aria-hidden="true"></i> <i class="fa fa-google" aria-hidden="true"></i> <i class="fa fa-linkedin-square" aria-hidden="true"></i> <i class="fa fa-share-alt-square" aria-hidden="true"></i> <i class="fa fa-slack" aria-hidden="true"></i> <i class="fa fa-linkedin" aria-hidden="true"></i> <i class="fa fa-codiepie" aria-hidden="true"></i> <br> www.myProfile.com/Allen <br> Aspiring Developers, Inc. <br> (+63) 977 123 4567 <br> email.address@someMail.com
+                    </p>
+
+                </div>
+            </div>
+            <div class="footer-bottom-container">
+                <!--bottom footer: extend-->
+                <div>
+                    <quote>
+                        <i>"Programmers of tomorrow are wizards of the future... It's the closest thing we have to super powers" </i>
+                    </quote>
+
+                    <br>
+                    <br>
+
+                    <p> All Rights Reserved, 2017 &#174;
+                        <!-- Copyright &#169; -->| John Allen de Chavez | Bachelor of Science in Information Technology | AMA Computer College Lipa City - 2017</p>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+    <!--Main container-->
+
+    <!--jquery-->
+    <script src="script/jquery-3.2.1.js">
+    </script>
+    <!--page interaction-->
+    <script src="script/page-function.js" type="text/jscript">
+    </script>
+
+    <!--calculator-->
+    <script type='text/javascript' src="script/main.js">
+    </script>
+    <script type='text/javascript' src="script/phContibution.js">
+    </script>
+
+
+</body>
+
+</html>
